@@ -12,7 +12,7 @@ from llama_index.llms.ollama import Ollama
 nest_asyncio.apply()
 
 documents = SimpleDirectoryReader(
-    input_files=["Document/AI.txt"]
+    input_files=["document/AI.txt"]
 ).load_data()
 
 combined_documents = Document(text="\n\n".join([doc.text for doc in documents]))
