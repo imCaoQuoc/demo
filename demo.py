@@ -8,7 +8,6 @@ from llama_index.core.postprocessor import MetadataReplacementPostProcessor, Sen
 from llama_index.core import SimpleDirectoryReader, Document, VectorStoreIndex, Settings, load_index_from_storage, StorageContext
 from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 from llama_index.llms.ollama import Ollama
-from streamlit.runtime.scriptrunner.script_run_context import get_script_run_ctx as get_report_ctx
 
 nest_asyncio.apply()
 
