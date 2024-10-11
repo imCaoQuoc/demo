@@ -1,0 +1,6 @@
+llama-index
+wikipedia
+streamlit
+streamlit-chat
+llama-index-llms-ollama
+llama-index-embeddings-huggingface
