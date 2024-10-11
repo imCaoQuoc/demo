@@ -1,4 +1,5 @@
 llama-index
+ollama
 wikipedia
 streamlit
 streamlit-chat
