@@ -29,19 +29,10 @@ def get_build_index(documents, embed_model="BAAI/bge-small-en-v1.5", save_dir=".
     Settings.num_output = 512
     Settings.context_window = 3900
 
-    # Check if the save directory exists
-    if not os.path.exists(save_dir):
-        # Create and load the index
-        index = VectorStoreIndex.from_documents(
-            [combined_documents], service_context=Settings
-        )
-        index.storage_context.persist(persist_dir=save_dir)
-    else:
-        # Load the existing index
-        index = load_index_from_storage(
-            StorageContext.from_defaults(persist_dir=save_dir),
-            service_context=Settings,
-        )
+    index = load_index_from_storage(
+        StorageContext.from_defaults(persist_dir=save_dir),
+        service_context=Settings,
+    )
     return index
 
 def get_query_engine(sentence_index, similarity_top_k=6, rerank_top_n=2):
